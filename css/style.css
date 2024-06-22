@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #160345;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #160345;
+}
+
+h1 {
+    text-align: center;
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+.projects-container {}
+
+.project {
+    height: auto; /* Ajusta a altura para permitir conteúdos dinâmicos */
+    display: flex;
+    flex-wrap: wrap; /* Para melhor responsividade */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px; /* Reduzi a borda arredondada */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    overflow: hidden; /* Para esconder qualquer conteúdo extra que possa vazar */
+    position: relative; /* Necessário para que o pseudo-elemento :after funcione corretamente */
+}
+
+.project h2 {
+    margin-top: 0;
+    color: #160345;
+    flex-basis: 100%; /* Ocupa toda a largura em telas menores */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-size: 1.5rem; /* Tamanho ajustável para melhor leitura */
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px; /* Adicionando borda arredondada à imagem */
+    transition: opacity 0.3s ease; /* Adicionando transição suave */
+}
+
+.project .description {
+    flex: 1; /* Ocupa todo o espaço restante */
+    margin-left: 20px;
+    display: flex; /* Para alinhar verticalmente o texto e o link */
+    flex-direction: column; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento vertical */
+}
+
+.project .description p {
+    color: #ffc107;
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 15px; /* Espaço abaixo do parágrafo */
+}
+
+.project .description a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.project:hover img {
+    opacity: 0.9; /* Leve mudança na opacidade para destacar a imagem */
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project img {
+        margin-bottom: 20px;
+    }
+    .project .description {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .project h2 {
+        font-size: 1.2rem;
+    }
+}
