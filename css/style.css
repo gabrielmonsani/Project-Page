@@ -19,8 +19,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.projects-container {}
-
 .project {
     height: auto; /* Ajusta a altura para permitir conteúdos dinâmicos */
     display: flex;
